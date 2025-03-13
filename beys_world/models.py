@@ -18,13 +18,13 @@ class Blade(models.Model):
     spin_direction = models.CharField(
         max_length=50, default="N/A", verbose_name=_("Spin Direction")
     )
-    weight = models.FloatField(blank=True, verbose_name=_("Weight"))
+    weight = models.FloatField(null=True, blank=True, verbose_name=_("Weight"))
     system_bey = models.CharField(
         max_length=50, default="N/A", verbose_name=_("System")
     )
-    stat_attack = models.IntegerField(blank=True, verbose_name=_("Attack"))
-    stat_defense = models.IntegerField(blank=True, verbose_name=_("Defense"))
-    stat_stamina = models.IntegerField(blank=True, verbose_name=_("Stamina"))
+    stat_attack = models.IntegerField(null=True, blank=True, verbose_name=_("Attack"))
+    stat_defense = models.IntegerField(null=True, blank=True, verbose_name=_("Defense"))
+    stat_stamina = models.IntegerField(null=True, blank=True, verbose_name=_("Stamina"))
     link_fandom = models.CharField(max_length=100, verbose_name="Link Fandom")
     show = models.BooleanField(default=True, verbose_name=_("Show"))
     created_date = models.DateTimeField(
