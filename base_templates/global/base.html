@@ -1,5 +1,6 @@
+{% load i18n %}
 {% load static %}<!DOCTYPE html>
-<html lang="en">
+<html lang="{{ html_language }}">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -8,6 +9,21 @@
         <link rel="stylesheet" href="{% static 'global/css/style.css' %}" />
     </head>
     <body>
-        <h1>QUALQUER</h1>
+        <h1>{% translate "Blades" %}</h1>
+        <ul>
+            {% for blade in blades %}
+                <li>{{ blade.name_takara }}</li>
+                <li>{{ blade.name_Hasbro }}</li>
+                <li>{{ blade.link_blades }}</li>
+                <li>{{ blade.type_bey }}</li>
+                <li>{{ blade.spin_direction }}</li>
+                <li>{{ blade.weight }} {% translate "grams" %}</li>
+                <li>{{ blade.system_bey }}</li>
+                <li>{{ blade.stat_attack }}</li>
+                <li>{{ blade.stat_defense }}</li>
+                <li>{{ blade.stat_stamina }}</li>
+                <li><a href="{{ blade.link_fandom }}" target="_blank">Ver mais</a></li>
+            {% endfor %}
+        </ul>
     </body>
 </html>
