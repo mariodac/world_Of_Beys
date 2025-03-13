@@ -1,0 +1,74 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-03-13 08:18-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+#: .\beys_world\models.py:8
+msgid "Blade"
+msgstr "Lâmina"
+
+#: .\beys_world\models.py:9
+msgid "Blades"
+msgstr "Lâminas"
+
+#: .\beys_world\models.py:11
+msgid "Takara Tomy Name"
+msgstr "Takara Tomy Nome"
+
+#: .\beys_world\models.py:12
+msgid "Hasbro Name"
+msgstr "Hasbro Nome"
+
+#: .\beys_world\models.py:15
+msgid "Image"
+msgstr "Imagem"
+
+#: .\beys_world\models.py:17
+msgid "Type"
+msgstr "Tipo"
+
+#: .\beys_world\models.py:19
+msgid "Spin Direction"
+msgstr "Direção de Rotação"
+
+#: .\beys_world\models.py:21
+msgid "Weight"
+msgstr "Peso"
+
+#: .\beys_world\models.py:23
+msgid "System"
+msgstr "Sistema"
+
+#: .\beys_world\models.py:25
+msgid "Attack"
+msgstr "Ataque"
+
+#: .\beys_world\models.py:26
+msgid "Defense"
+msgstr "Defesa"
+
+#: .\beys_world\models.py:27
+msgid "Stamina"
+msgstr "Resistência"
+
+#: .\beys_world\models.py:29
+msgid "Show"
+msgstr "Exibir"
+
+#: .\beys_world\models.py:31
+msgid "Created Date"
+msgstr "Data de Criação"
