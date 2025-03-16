@@ -31,8 +31,9 @@ if __name__ == "__main__":
     for item in beyblades_parts.get("Blades"):
 
         file_name = os.path.basename(item.get("Image Path"))
-        if file_name == "N/A":
-            file_image = open(item.get("Image Path"), "rb")
+        if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
+            path =  item.get("Image Path").replace('%USERPROFILE%', '')
+            file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
             django_blades.append(
                 Blade(
                     name_takara=item.get("Takara Tomy Name"),
