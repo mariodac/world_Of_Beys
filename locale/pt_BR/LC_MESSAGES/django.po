@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-13 09:42-0300\n"
+"POT-Creation-Date: 2025-03-16 20:47-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\base_templates\global\base.html:12 .\beys_world\models.py:9
+#: .\base_templates\global\base.html:13 .\beys_world\models.py:9
 msgid "Blades"
 msgstr "Lâminas"
 
-#: .\base_templates\global\base.html:21
+#: .\base_templates\global\base.html:20
 msgid "grams"
 msgstr "gramas"
 
@@ -30,50 +30,102 @@ msgstr "gramas"
 msgid "Blade"
 msgstr "Lâmina"
 
-#: .\beys_world\models.py:11
+#: .\beys_world\models.py:12 .\beys_world\models.py:123
+#: .\beys_world\models.py:156
 msgid "Takara Tomy Name"
 msgstr "Takara Tomy Nome"
 
-#: .\beys_world\models.py:12
+#: .\beys_world\models.py:15 .\beys_world\models.py:126
+#: .\beys_world\models.py:159 .\beys_world\models.py:193
 msgid "Hasbro Name"
 msgstr "Hasbro Nome"
 
-#: .\beys_world\models.py:15
+#: .\beys_world\models.py:18 .\beys_world\models.py:53
+#: .\beys_world\models.py:88 .\beys_world\models.py:129
+#: .\beys_world\models.py:162 .\beys_world\models.py:196
 msgid "Image"
 msgstr "Imagem"
 
-#: .\beys_world\models.py:17
+#: .\beys_world\models.py:20 .\beys_world\models.py:55
+#: .\beys_world\models.py:90 .\beys_world\models.py:164
+#: .\beys_world\models.py:198
 msgid "Type"
 msgstr "Tipo"
 
-#: .\beys_world\models.py:19
+#: .\beys_world\models.py:22 .\beys_world\models.py:57
+#: .\beys_world\models.py:92 .\beys_world\models.py:132
+#: .\beys_world\models.py:166 .\beys_world\models.py:200
 msgid "Spin Direction"
 msgstr "Direção de Rotação"
 
-#: .\beys_world\models.py:21
+#: .\beys_world\models.py:25 .\beys_world\models.py:60
+#: .\beys_world\models.py:95 .\beys_world\models.py:135
+#: .\beys_world\models.py:169 .\beys_world\models.py:203
 msgid "Weight"
 msgstr "Peso"
 
-#: .\beys_world\models.py:23
+#: .\beys_world\models.py:28 .\beys_world\models.py:63
+#: .\beys_world\models.py:98 .\beys_world\models.py:138
+#: .\beys_world\models.py:172 .\beys_world\models.py:206
 msgid "System"
 msgstr "Sistema"
 
-#: .\beys_world\models.py:25
+#: .\beys_world\models.py:30 .\beys_world\models.py:65
+#: .\beys_world\models.py:100
 msgid "Attack"
 msgstr "Ataque"
 
-#: .\beys_world\models.py:26
+#: .\beys_world\models.py:31 .\beys_world\models.py:66
+#: .\beys_world\models.py:101
 msgid "Defense"
 msgstr "Defesa"
 
-#: .\beys_world\models.py:27
+#: .\beys_world\models.py:32 .\beys_world\models.py:67
+#: .\beys_world\models.py:102
 msgid "Stamina"
 msgstr "Resistência"
 
-#: .\beys_world\models.py:29
+#: .\beys_world\models.py:34 .\beys_world\models.py:69
+#: .\beys_world\models.py:108 .\beys_world\models.py:141
+#: .\beys_world\models.py:175 .\beys_world\models.py:209
 msgid "Show"
 msgstr "Exibir"
 
-#: .\beys_world\models.py:31
+#: .\beys_world\models.py:36 .\beys_world\models.py:71
+#: .\beys_world\models.py:110 .\beys_world\models.py:143
+#: .\beys_world\models.py:177 .\beys_world\models.py:211
 msgid "Created Date"
 msgstr "Data de Criação"
+
+#: .\beys_world\models.py:45
+msgid "Ratchet"
+msgstr "Engrenagem"
+
+#: .\beys_world\models.py:46
+msgid "Ratchets"
+msgstr "Engrenagens"
+
+#: .\beys_world\models.py:49 .\beys_world\models.py:84
+#: .\beys_world\models.py:190
+msgid "Abbreviation"
+msgstr "Abreviação"
+
+#: .\beys_world\models.py:51 .\beys_world\models.py:86
+msgid "Name"
+msgstr "Nome"
+
+#: .\beys_world\models.py:80
+msgid "Bit"
+msgstr "Ponta"
+
+#: .\beys_world\models.py:81
+msgid "Bits"
+msgstr "Pontas"
+
+#: .\beys_world\models.py:104
+msgid "Burst Resistance"
+msgstr "Resistência a Eclosão"
+
+#: .\beys_world\models.py:106
+msgid "Dash"
+msgstr "Avanço"

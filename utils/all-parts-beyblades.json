@@ -1355,8 +1355,8 @@
          "AttackStat": "15",
          "DefenseStat": "25",
          "StaminaStat": "50",
-         "Avanço": "10",
-         "Eclosão": "30"
+         "Dash": "10",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "C",
@@ -1369,8 +1369,8 @@
          "AttackStat": "40",
          "DefenseStat": "5",
          "StaminaStat": "10",
-         "Avanço": "45",
-         "Eclosão": "80"
+         "Dash": "45",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "D",
@@ -1383,8 +1383,8 @@
          "AttackStat": "30",
          "DefenseStat": "15",
          "StaminaStat": "20",
-         "Avanço": "35",
-         "Eclosão": "30"
+         "Dash": "35",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "E",
@@ -1397,8 +1397,8 @@
          "AttackStat": "30",
          "DefenseStat": "15",
          "StaminaStat": "20",
-         "Avanço": "35",
-         "Eclosão": "30"
+         "Dash": "35",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "F",
@@ -1411,8 +1411,8 @@
          "AttackStat": "40",
          "DefenseStat": "15",
          "StaminaStat": "10",
-         "Avanço": "35",
-         "Eclosão": "80"
+         "Dash": "35",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "GB",
@@ -1425,8 +1425,8 @@
          "AttackStat": "10",
          "DefenseStat": "15",
          "StaminaStat": "45",
-         "Avanço": "30",
-         "Eclosão": "30"
+         "Dash": "30",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "GF",
@@ -1439,8 +1439,8 @@
          "AttackStat": "50",
          "DefenseStat": "5",
          "StaminaStat": "5",
-         "Avanço": "40",
-         "Eclosão": "80"
+         "Dash": "40",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "GN",
@@ -1453,8 +1453,8 @@
          "AttackStat": "20",
          "DefenseStat": "40",
          "StaminaStat": "10",
-         "Avanço": "30",
-         "Eclosão": "30"
+         "Dash": "30",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "GP",
@@ -1467,8 +1467,8 @@
          "AttackStat": "30",
          "DefenseStat": "25",
          "StaminaStat": "15",
-         "Avanço": "30",
-         "Eclosão": "80"
+         "Dash": "30",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "HN",
@@ -1481,8 +1481,8 @@
          "AttackStat": "15",
          "DefenseStat": "55",
          "StaminaStat": "20",
-         "Avanço": "10",
-         "Eclosão": "30"
+         "Dash": "10",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "HT",
@@ -1495,8 +1495,8 @@
          "AttackStat": "30",
          "DefenseStat": "25",
          "StaminaStat": "20",
-         "Avanço": "25",
-         "Eclosão": "80"
+         "Dash": "25",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "LF",
@@ -1509,8 +1509,8 @@
          "AttackStat": "45",
          "DefenseStat": "5",
          "StaminaStat": "10",
-         "Avanço": "40",
-         "Eclosão": "80"
+         "Dash": "40",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "N",
@@ -1523,8 +1523,8 @@
          "AttackStat": "10",
          "DefenseStat": "50",
          "StaminaStat": "30",
-         "Avanço": "10",
-         "Eclosão": "30"
+         "Dash": "10",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "O",
@@ -1537,8 +1537,8 @@
          "AttackStat": "10",
          "DefenseStat": "30",
          "StaminaStat": "50",
-         "Avanço": "10",
-         "Eclosão": "30"
+         "Dash": "10",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "P",
@@ -1551,8 +1551,8 @@
          "AttackStat": "25",
          "DefenseStat": "25",
          "StaminaStat": "25",
-         "Avanço": "25",
-         "Eclosão": "80"
+         "Dash": "25",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "Q",
@@ -1565,8 +1565,8 @@
          "AttackStat": "55",
          "DefenseStat": "15",
          "StaminaStat": "5",
-         "Avanço": "25",
-         "Eclosão": "80"
+         "Dash": "25",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "R",
@@ -1579,8 +1579,8 @@
          "AttackStat": "40",
          "DefenseStat": "10",
          "StaminaStat": "20",
-         "Avanço": "30",
-         "Eclosão": "80"
+         "Dash": "30",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "S",
@@ -1593,8 +1593,8 @@
          "AttackStat": "10",
          "DefenseStat": "45",
          "StaminaStat": "35",
-         "Avanço": "10",
-         "Eclosão": "30"
+         "Dash": "10",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "T",
@@ -1607,8 +1607,8 @@
          "AttackStat": "35",
          "DefenseStat": "20",
          "StaminaStat": "20",
-         "Avanço": "25",
-         "Eclosão": "80"
+         "Dash": "25",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "TP",
@@ -1621,8 +1621,8 @@
          "AttackStat": "35",
          "DefenseStat": "25",
          "StaminaStat": "25",
-         "Avanço": "15",
-         "Eclosão": "80"
+         "Dash": "15",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "U",
@@ -1635,8 +1635,8 @@
          "AttackStat": "25",
          "DefenseStat": "25",
          "StaminaStat": "30",
-         "Avanço": "20",
-         "Eclosão": "80"
+         "Dash": "20",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "K",
@@ -1649,8 +1649,8 @@
          "AttackStat": "N/A",
          "DefenseStat": "N/A",
          "StaminaStat": "N/A",
-         "Avanço": "N/A",
-         "Eclosão": "N/A"
+         "Dash": "N/A",
+         "BurstResistanceStat": "N/A"
       },
       {
          "Abbr.": "LO",
@@ -1663,8 +1663,8 @@
          "AttackStat": "5",
          "DefenseStat": "25",
          "StaminaStat": "55",
-         "Avanço": "15",
-         "Eclosão": "30"
+         "Dash": "15",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "V",
@@ -1677,8 +1677,8 @@
          "AttackStat": "45",
          "DefenseStat": "10",
          "StaminaStat": "5",
-         "Avanço": "40",
-         "Eclosão": "80"
+         "Dash": "40",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "W",
@@ -1691,8 +1691,8 @@
          "AttackStat": "5",
          "DefenseStat": "55",
          "StaminaStat": "30",
-         "Avanço": "10",
-         "Eclosão": "30"
+         "Dash": "10",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "A",
@@ -1705,8 +1705,8 @@
          "AttackStat": "40",
          "DefenseStat": "10",
          "StaminaStat": "10",
-         "Avanço": "40",
-         "Eclosão": "80"
+         "Dash": "40",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "BS",
@@ -1719,8 +1719,8 @@
          "AttackStat": "15",
          "DefenseStat": "60",
          "StaminaStat": "30",
-         "Avanço": "20",
-         "Eclosão": "80"
+         "Dash": "20",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "DB",
@@ -1733,8 +1733,8 @@
          "AttackStat": "15",
          "DefenseStat": "20",
          "StaminaStat": "55",
-         "Avanço": "10",
-         "Eclosão": "30"
+         "Dash": "10",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "FB",
@@ -1747,8 +1747,8 @@
          "AttackStat": "10",
          "DefenseStat": "25",
          "StaminaStat": "60",
-         "Avanço": "5",
-         "Eclosão": "30"
+         "Dash": "5",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "G",
@@ -1761,8 +1761,8 @@
          "AttackStat": "20",
          "DefenseStat": "10",
          "StaminaStat": "55",
-         "Avanço": "15",
-         "Eclosão": "30"
+         "Dash": "15",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "H",
@@ -1775,8 +1775,8 @@
          "AttackStat": "30",
          "DefenseStat": "35",
          "StaminaStat": "20",
-         "Avanço": "15",
-         "Eclosão": "80"
+         "Dash": "15",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "L",
@@ -1789,8 +1789,8 @@
          "AttackStat": "40",
          "DefenseStat": "5",
          "StaminaStat": "15",
-         "Avanço": "40",
-         "Eclosão": "80"
+         "Dash": "40",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "LR",
@@ -1803,8 +1803,8 @@
          "AttackStat": "45",
          "DefenseStat": "5",
          "StaminaStat": "15",
-         "Avanço": "35",
-         "Eclosão": "80"
+         "Dash": "35",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "MN",
@@ -1817,8 +1817,8 @@
          "AttackStat": "8",
          "DefenseStat": "57",
          "StaminaStat": "30",
-         "Avanço": "5",
-         "Eclosão": "30"
+         "Dash": "5",
+         "BurstResistanceStat": "30"
       },
       {
          "Abbr.": "RA",
@@ -1831,8 +1831,8 @@
          "AttackStat": "60",
          "DefenseStat": "17",
          "StaminaStat": "3",
-         "Avanço": "20",
-         "Eclosão": "80"
+         "Dash": "20",
+         "BurstResistanceStat": "80"
       },
       {
          "Abbr.": "UN",
@@ -1845,8 +1845,8 @@
          "AttackStat": "10",
          "DefenseStat": "60",
          "StaminaStat": "20",
-         "Avanço": "10",
-         "Eclosão": "30"
+         "Dash": "10",
+         "BurstResistanceStat": "30"
       }
    ],
    "Lock Chips": [
