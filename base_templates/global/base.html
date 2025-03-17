@@ -14,7 +14,7 @@
         <ul>
             {% for blade in blades %}
                 <li>{{ blade.name_takara }}</li>
-                <li>{{ blade.name_Hasbro }}</li>
+                <li>{{ blade.name_hasbro }}</li>
                 <li>{{ blade.type_bey }}</li>
                 <li>{{ blade.spin_direction }}</li>
                 <li>{{ blade.weight }} {% translate "grams" %}</li>
@@ -23,7 +23,7 @@
                 <li>{{ blade.stat_defense }}</li>
                 <li>{{ blade.stat_stamina }}</li>
                 <li><a href="{{ blade.link_fandom }}" target="_blank">Ver mais</a></li>
-                {% comment %} <li><img src="http://127.0.0.1:8000/{{ blade.image }}" alt="Imagem da Lâmina {{ blade.name_Hasbro }}"></li> {% endcomment %}
+                {% comment %} <li><img src="http://127.0.0.1:8000/{{ blade.image }}" alt="Imagem da Lâmina {{ blade.name_hasbro }}"></li> {% endcomment %}
                 <br><br>
             {% endfor %}
         </ul>
