@@ -85,9 +85,6 @@ class Bit(models.Model):
         upload_to="pictures/blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
     )
     type_bey = models.CharField(max_length=50, default="N/A", verbose_name=_("Type"))
-    spin_direction = models.CharField(
-        max_length=50, default="N/A", verbose_name=_("Spin Direction")
-    )
     weight = models.FloatField(
         null=True, blank=True, verbose_name=_("Weight"), default=None
     )
@@ -187,7 +184,7 @@ class AssistBlade(models.Model):
         max_length=50, default="N/A", verbose_name=_("Abbreviation")
     )
     name = models.CharField(
-        max_length=50, default="N/A", verbose_name=_("Hasbro Name")
+        max_length=50, default="N/A", verbose_name=_("Name")
     )
     image = models.ImageField(
         upload_to="pictures/blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
