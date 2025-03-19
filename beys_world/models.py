@@ -53,9 +53,6 @@ class Ratchet(models.Model):
         upload_to="pictures/blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
     )
     type_bey = models.CharField(max_length=50, default="N/A", verbose_name=_("Type"))
-    spin_direction = models.CharField(
-        max_length=50, default="N/A", verbose_name=_("Spin Direction")
-    )
     weight = models.FloatField(
         null=True, blank=True, verbose_name=_("Weight"), default=None
     )

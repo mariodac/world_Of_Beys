@@ -54,7 +54,6 @@ class RatchetAdmin(admin.ModelAdmin):
         "name",
         "image",
         "type_bey",
-        "spin_direction",
         "weight",
         "system_bey",
         "stat_attack",
