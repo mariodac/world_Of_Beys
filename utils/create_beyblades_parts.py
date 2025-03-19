@@ -93,7 +93,6 @@ if __name__ == "__main__":
                         name=file_name,
                     ),
                     type_bey=item.get("Type"),
-                    spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
                     stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
@@ -108,7 +107,6 @@ if __name__ == "__main__":
                     abbreviation=item.get("Abbr."),
                     name=item.get("Name"),
                     type_bey=item.get("Type"),
-                    spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
                     stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
@@ -124,7 +122,7 @@ if __name__ == "__main__":
         if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
             path =  item.get("Image Path").replace('%USERPROFILE%', '')
             file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
-            django_blades.append(
+            django_bits.append(
                 Bit(
                     abbreviation=item.get("Abbr."),
                     name=item.get("Name"),
@@ -133,7 +131,6 @@ if __name__ == "__main__":
                         name=file_name,
                     ),
                     type_bey=item.get("Type"),
-                    spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
                     stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
@@ -145,12 +142,11 @@ if __name__ == "__main__":
                 )
             )
         else:
-            django_blades.append(
+            django_bits.append(
                 Bit(
                     abbreviation=item.get("Abbr."),
                     name=item.get("Name"),
                     type_bey=item.get("Type"),
-                    spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
                     stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
@@ -213,10 +209,7 @@ if __name__ == "__main__":
                     spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
-                    stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
-                    stat_defense=item.get("DefenseStat") if item.get("DefenseStat") != "N/A" else None,
-                    stat_stamina=item.get("StaminaStat") if item.get("StaminaStat") != "N/A" else None,
-                    link_fandom=item.get("Link Blades"),
+                    link_fandom=item.get("Link Main Blades"),
                 )
             )
         else:
@@ -228,10 +221,41 @@ if __name__ == "__main__":
                     spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
-                    stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
-                    stat_defense=item.get("DefenseStat") if item.get("DefenseStat") != "N/A" else None,
-                    stat_stamina=item.get("StaminaStat") if item.get("StaminaStat") != "N/A" else None,
-                    link_fandom=item.get("Link Blades"),
+                    link_fandom=item.get("Link Main Blades"),
+                )
+            )
+
+    for item in beyblades_parts.get("Assist Blades"):
+
+        file_name = os.path.basename(item.get("Image Path"))
+        if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
+            path =  item.get("Image Path").replace('%USERPROFILE%', '')
+            file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
+            django_assist_blades.append(
+                AssistBlade(
+                    abbreviation=item.get("Abbr."),
+                    name=item.get("Name"),
+                    image=File(
+                        file_image,
+                        name=file_name,
+                    ),
+                    type_bey=item.get("Type"),
+                    spin_direction=item.get("SpinDirection"),
+                    weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
+                    system_bey=item.get("System"),
+                    link_fandom=item.get("Link Assist Blades"),
+                )
+            )
+        else:
+            django_assist_blades.append(
+                AssistBlade(
+                    abbreviation=item.get("Abbr."),
+                    name=item.get("Name"),
+                    type_bey=item.get("Type"),
+                    spin_direction=item.get("SpinDirection"),
+                    weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
+                    system_bey=item.get("System"),
+                    link_fandom=item.get("Link Assist Blades"),
                 )
             )
 
