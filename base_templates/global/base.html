@@ -23,7 +23,10 @@
                 <li>{{ blade.stat_defense }}</li>
                 <li>{{ blade.stat_stamina }}</li>
                 <li><a href="{{ blade.link_fandom }}" target="_blank">Ver mais</a></li>
-                {% comment %} <li><img src="http://127.0.0.1:8000/{{ blade.image }}" alt="Imagem da Lâmina {{ blade.name_hasbro }}"></li> {% endcomment %}
+                {% if blade.image %}
+                    <li>{{ blade.image }}</li>
+                    <img src="{{ blade.image.url }}" alt="{{ blade.name_takara }}" >
+                {% endif %}
                 <br><br>
             {% endfor %}
         </ul>
