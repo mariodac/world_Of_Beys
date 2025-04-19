@@ -1,0 +1,26 @@
+/* *,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+@keyframes pulse-subtle {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+.hover-pulse:hover {
+    animation: pulse-subtle 2s infinite;
+}
+.blade-card {
+    transition: all 0.3s ease;
+}
+.blade-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+.filter-btn.active {
+    background-color: #3b82f6;
+    color: white;
+}
