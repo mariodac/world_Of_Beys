@@ -15,7 +15,8 @@ def index(request):
         'bits': bits,
         'lock_chips': lock_chips,
         'main_blades': main_blades,
-        'assist_blades': assist_blades
+        'assist_blades': assist_blades,
+        'title': 'index',
     }
     return render(
         request,
