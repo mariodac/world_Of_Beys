@@ -3,32 +3,11 @@
 <!DOCTYPE html>
 <html lang="{{ html_language }}">
     <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Document</title>
-        <link rel="stylesheet" href="{% static 'global/css/style.css' %}" />
+        {% include "global/partials/_head.html" %}
     </head>
-    <body>
-        <h1>{% translate "Blades" %}</h1>
-        <ul>
-            {% for blade in blades %}
-                <li>{{ blade.name_takara }}</li>
-                <li>{{ blade.name_hasbro }}</li>
-                <li>{{ blade.type_bey }}</li>
-                <li>{{ blade.spin_direction }}</li>
-                <li>{{ blade.weight }} {% translate "grams" %}</li>
-                <li>{{ blade.system_bey }}</li>
-                <li>{{ blade.stat_attack }}</li>
-                <li>{{ blade.stat_defense }}</li>
-                <li>{{ blade.stat_stamina }}</li>
-                <li><a href="{{ blade.link_fandom }}" target="_blank">Ver mais</a></li>
-                {% if blade.image %}
-                    <li>{{ blade.image }}</li>
-                    <img src="{{ blade.image.url }}" alt="{{ blade.name_takara }}" >
-                {% endif %}
-                <br><br>
-            {% endfor %}
-        </ul>
+    <body class="bg-gray-100 min-h-screen">
+        <main class="container mx-auto px-4 py-8">
+            {% block content %} {% endblock content %}
+        </main>
     </body>
 </html>
