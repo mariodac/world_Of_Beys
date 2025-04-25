@@ -14,10 +14,39 @@ import re
 from wx import App, FileDialog, DirDialog, FD_OPEN, FD_FILE_MUST_EXIST, ID_OK, DD_DEFAULT_STYLE, DD_DIR_MUST_EXIST
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
+from dotenv import load_dotenv
 
 class Utils:
     def __init__(self):
         pass
+
+    def upload_image_to_imgbb(self, image_path):
+        """
+        Realiza o upload de uma imagem local para o imgbb.
+
+        Args:
+            image_path (str): O caminho para o arquivo de imagem local.
+
+        Returns:
+            dict: Um dicionário contendo a resposta da API do imgbb em formato JSON,
+                ou None em caso de erro.
+        """
+        load_dotenv()
+        url = "https://api.imgbb.com/1/upload"
+        payload = {
+            "key": os.getenv("API_IMGBB")
+        }
+        try:
+            with open(image_path, 'rb') as image_file:
+                files = {
+                    'image': image_file
+                }
+                response = requests.post(url, params=payload, files=files)
+                response.raise_for_status()  # Levanta uma exceção para códigos de status de erro
+                return response.json()['data']
+        except requests.exceptions.RequestException as e:
+            print(f"Erro ao fazer upload da imagem: {e}")
+            return None
 
     def download_file(self,url, download_dir:Path):
         """
@@ -256,4 +285,7 @@ class Utils:
     
 if __name__ == "__main__":
     utils = Utils()
-    utils.download_file(r"https://beyblade.fandom.com/wiki/List_of_Custom_Line_parts?file=AssistBladeSlash.png",r"C:\Users\mario\Documents\GitHub\Scripts-python\downloads\Blades")
+    # utils.download_file(r"https://beyblade.fandom.com/wiki/List_of_Custom_Line_parts?file=AssistBladeSlash.png",r"C:\Users\mario\Documents\GitHub\Scripts-python\downloads\Blades")
+    img_path = "C:/Users/mario/Documents/GitHub/world_Of_Beys/utils/downloads/Hasbro Debut/Yell_Kong_3-60GB.png"
+    json = utils.upload_image_to_imgbb(img_path)
+    print(json)
