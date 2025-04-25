@@ -50,7 +50,7 @@ class Ratchet(models.Model):
     )
     name = models.CharField(max_length=50, default="N/A", verbose_name=_("Name"))
     image = models.ImageField(
-        upload_to="pictures/blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
+        upload_to="pictures/ratchets/%Y/%m/%d", blank=True, verbose_name=_("Image")
     )
     type_bey = models.CharField(max_length=50, default="N/A", verbose_name=_("Type"))
     weight = models.FloatField(
@@ -82,7 +82,7 @@ class Bit(models.Model):
     )
     name = models.CharField(max_length=50, default="N/A", verbose_name=_("Name"))
     image = models.ImageField(
-        upload_to="pictures/blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
+        upload_to="pictures/bits/%Y/%m/%d", blank=True, verbose_name=_("Image")
     )
     type_bey = models.CharField(max_length=50, default="N/A", verbose_name=_("Type"))
     weight = models.FloatField(
@@ -120,7 +120,7 @@ class LockChip(models.Model):
         max_length=50, default="N/A", verbose_name=_("Hasbro Name")
     )
     image = models.ImageField(
-        upload_to="pictures/blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
+        upload_to="pictures/lock_chips/%Y/%m/%d", blank=True, verbose_name=_("Image")
     )
     spin_direction = models.CharField(
         max_length=50, default="N/A", verbose_name=_("Spin Direction")
@@ -153,7 +153,7 @@ class MainBlade(models.Model):
         max_length=50, default="N/A", verbose_name=_("Hasbro Name")
     )
     image = models.ImageField(
-        upload_to="pictures/blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
+        upload_to="pictures/main_blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
     )
     type_bey = models.CharField(max_length=50, default="N/A", verbose_name=_("Type"))
     spin_direction = models.CharField(
@@ -187,7 +187,7 @@ class AssistBlade(models.Model):
         max_length=50, default="N/A", verbose_name=_("Name")
     )
     image = models.ImageField(
-        upload_to="pictures/blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
+        upload_to="pictures/assist_blades/%Y/%m/%d", blank=True, verbose_name=_("Image")
     )
     type_bey = models.CharField(max_length=50, default="N/A", verbose_name=_("Type"))
     spin_direction = models.CharField(
