@@ -49,7 +49,7 @@ if __name__ == "__main__":
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             else:
-                path_download = os.environ['TMP']
+                path_download = os.path.join(os.environ['HOME'], 'Downloads')
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             file_name = os.path.basename(path)
@@ -97,7 +97,7 @@ if __name__ == "__main__":
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             else:
-                path_download = os.environ['TMP']
+                path_download = os.environ['HOME'] +  '/Downloads'
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             file_name = os.path.basename(path)
@@ -143,7 +143,7 @@ if __name__ == "__main__":
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             else:
-                path_download = os.environ['TMP']
+                path_download = os.environ['HOME'] +  '/Downloads'
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             file_name = os.path.basename(path)
@@ -193,7 +193,7 @@ if __name__ == "__main__":
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             else:
-                path_download = os.environ['TMP']
+                path_download = os.environ['HOME'] +  '/Downloads'
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             file_name = os.path.basename(path)
@@ -234,7 +234,7 @@ if __name__ == "__main__":
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             else:
-                path_download = os.environ['TMP']
+                path_download = os.environ['HOME'] +  '/Downloads'
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             file_name = os.path.basename(path)
@@ -276,7 +276,7 @@ if __name__ == "__main__":
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             else:
-                path_download = os.environ['TMP']
+                path_download = os.environ['HOME'] +  '/Downloads'
                 path = utils.download_file(item.get("Image"), path_download)
                 path = os.path.join(path_download, path)
             file_name = os.path.basename(path)

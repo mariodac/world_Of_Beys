@@ -86,7 +86,7 @@ class Utils:
             filename = url.split("/")[-1]
 
         # Define o caminho completo para salvar o arquivo
-        download_path = Path(f"{str(download_dir)}\\{filename}")
+        download_path = Path(os.path.join(download_dir, filename))
         if not download_path.exists():
             # Salva o arquivo no disco se ainda não existir
             with open(download_path, "wb") as f:
