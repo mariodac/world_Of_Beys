@@ -625,7 +625,8 @@
       },
       {
          "Image": "https://i.ibb.co/N6h2B4Qs/Mosasaurus-9-60-U.png",
-         "Name": "Mosasaurus",
+         "Hasbro Name": "Mosasaurus",
+         "Takara Tomy Name": "N/A",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Mosasaurus",
          "Type": "Defense",
          "SpinDirection": "Right-Spin",
@@ -637,7 +638,8 @@
       },
       {
          "Image": "https://i.ibb.co/MdL6cdJ/Quetzalcoatlus-4-55-D.png",
-         "Name": "Quetzalcoatlus",
+         "Hasbro Name": "Quetzalcoatlus",
+         "Takara Tomy Name": "N/A",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Quetzalcoatlus",
          "Type": "Stamina",
          "SpinDirection": "Right-Spin",
@@ -649,7 +651,8 @@
       },
       {
          "Image": "https://i.ibb.co/jZhxcDht/Spinosaurus-3-85-A.png",
-         "Name": "Spinosaurus",
+         "Hasbro Name": "Spinosaurus",
+         "Takara Tomy Name": "N/A",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Spinosaurus",
          "Type": "Attack",
          "SpinDirection": "Right-Spin",
@@ -661,7 +664,8 @@
       },
       {
          "Image": "https://i.ibb.co/35hGWTgm/T-Rex-1-80-GB.png",
-         "Name": "T. Rex",
+         "Hasbro Name": "T. Rex",
+         "Takara Tomy Name": "N/A",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_T._Rex",
          "Type": "Attack",
          "SpinDirection": "Right-Spin",
@@ -673,7 +677,8 @@
       },
       {
          "Image": "https://i.ibb.co/5XdcfszQ/Captain-America-4-70-GB.png",
-         "Name": "Captain America",
+         "Hasbro Name": "Captain America",
+         "Takara Tomy Name": "N/A",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Captain_America",
          "Type": "Attack",
          "SpinDirection": "Right-Spin",
@@ -685,7 +690,8 @@
       },
       {
          "Image": "https://i.ibb.co/N6LvmC0Q/Iron-Man-4-80-B.png",
-         "Name": "Iron Man",
+         "Hasbro Name": "Iron Man",
+         "Takara Tomy Name": "N/A",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Iron_Man",
          "Type": "Defense",
          "SpinDirection": "Right-Spin",
@@ -697,7 +703,8 @@
       },
       {
          "Image": "https://i.ibb.co/wNy5dq2M/Red-Hulk-1-80-R.png",
-         "Name": "Red Hulk",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Red Hulk",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Red_Hulk",
          "Type": "Attack",
          "SpinDirection": "Right-Spin",
@@ -709,7 +716,8 @@
       },
       {
          "Image": "https://i.ibb.co/xtqypkkL/Spider-Man-3-60-F.png",
-         "Name": "Spider-Man",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Spider-Man",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Spider-Man",
          "Type": "Stamina",
          "SpinDirection": "Right-Spin",
@@ -721,7 +729,8 @@
       },
       {
          "Image": "https://i.ibb.co/hxs7YYNg/Thanos-4-60-P.png",
-         "Name": "Thanos",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Thanos",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Thanos",
          "Type": "Defense",
          "SpinDirection": "Right-Spin",
@@ -733,7 +742,8 @@
       },
       {
          "Image": "https://i.ibb.co/wZXRQKNV/Venom-3-80-N.png",
-         "Name": "Venom",
+         "Hasbro Name": "Venom",
+         "Takara Tomy Name": "N/A",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Venom",
          "Type": "Attack",
          "SpinDirection": "Right-Spin",
@@ -745,7 +755,8 @@
       },
       {
          "Image": "https://i.ibb.co/wFr3hgJK/Darth-Vader-4-60-P.png",
-         "Name": "Darth Vader",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Darth Vader",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Darth_Vader",
          "Type": "Defense",
          "SpinDirection": "Right-Spin",
@@ -757,7 +768,8 @@
       },
       {
          "Image": "https://i.ibb.co/dJ59yvp6/General-Grievous-3-80-HN.png",
-         "Name": "General Grievous",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "General Grievous",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_General_Grievous",
          "Type": "Defense",
          "SpinDirection": "Right-Spin",
@@ -769,7 +781,8 @@
       },
       {
          "Image": "https://i.ibb.co/rGPK7k7w/Luke-Skywalker-4-80-B.png",
-         "Name": "Luke Skywalker",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Luke Skywalker",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Luke_Skywalker",
          "Type": "Defense",
          "SpinDirection": "Right-Spin",
@@ -781,7 +794,8 @@
       },
       {
          "Image": "https://i.ibb.co/C3g77Rzh/Moff-Gideon-3-80-N.png",
-         "Name": "Moff Gideon",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Moff Gideon",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Moff_Gideon",
          "Type": "Balance",
          "SpinDirection": "Right-Spin",
@@ -793,7 +807,8 @@
       },
       {
          "Image": "https://i.ibb.co/R4bm5CdZ/Obi-Wan-Kenobi-4-60-P.png",
-         "Name": "Obi-Wan Kenobi",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Obi-Wan Kenobi",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Obi-Wan_Kenobi",
          "Type": "Defense",
          "SpinDirection": "Right-Spin",
@@ -805,7 +820,8 @@
       },
       {
          "Image": "https://i.ibb.co/hxj7x053/The-Mandalorian-3-60-F.png",
-         "Name": "The Mandalorian",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "The Mandalorian",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_The_Mandalorian",
          "Type": "Balance",
          "SpinDirection": "Right-Spin",
@@ -817,7 +833,8 @@
       },
       {
          "Image": "https://i.ibb.co/qLZpysmq/Megatron-4-80-B.png",
-         "Name": "Megatron",
+         "Hasbro Name": "Megatron",
+         "Takara Tomy Name": "N/A",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Megatron",
          "Type": "Balance",
          "SpinDirection": "Right-Spin",
@@ -829,7 +846,8 @@
       },
       {
          "Image": "https://i.ibb.co/sJ3rtd8M/Optimus-Primal-3-60-F.png",
-         "Name": "Optimus Primal",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Optimus Primal",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Optimus_Primal",
          "Type": "Attack",
          "SpinDirection": "Right-Spin",
@@ -841,7 +859,8 @@
       },
       {
          "Image": "https://i.ibb.co/qYwRjvsG/Optimus-Prime-4-60-P.png",
-         "Name": "Optimus Prime",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Optimus Prime",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Optimus_Prime",
          "Type": "Balance",
          "SpinDirection": "Right-Spin",
@@ -853,7 +872,8 @@
       },
       {
          "Image": "https://i.ibb.co/qYD9v3MJ/Starscream-3-80-N.png",
-         "Name": "Starscream",
+         "Takara Tomy Name": "N/A",
+         "Hasbro Name": "Starscream",
          "Link Collabs": "https://beyblade.fandom.com/wiki/Blade_-_Starscream",
          "Type": "Stamina",
          "SpinDirection": "Right-Spin",
