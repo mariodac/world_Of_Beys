@@ -5,7 +5,6 @@ from pathlib import Path
 
 
 utils = Utils()
-# path_choiced = utils.wx_dirdialog()
 # driver = utils.init_webdriver(default=True, headless=False, output=path_choiced)
 # driver.get("https://beyblade.fandom.com/wiki/List_of_Basic_Line_parts")
 urls = {

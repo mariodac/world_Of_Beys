@@ -11,7 +11,6 @@ from selenium.webdriver.chrome.service import Service as ChromiumService
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.core.os_manager import ChromeType
 import re
-from wx import App, FileDialog, DirDialog, FD_OPEN, FD_FILE_MUST_EXIST, ID_OK, DD_DEFAULT_STYLE, DD_DIR_MUST_EXIST
 from pathlib import Path
 from urllib.parse import urlparse, parse_qs
 from dotenv import load_dotenv
@@ -298,47 +297,7 @@ class Utils:
             print("Navegador não instalado")
             return None
         
-    def wx_filedialog(self, wildcard):
-        """Abre janela de dialogo para abrir arquivo
-
-        Args:
-            wildcard (str): Filtro de arquivos
-
-        Returns:
-            str: Caminho do arquivo escolhido
-        """
-        app = App(None)  # type: ignore
-        style = FD_OPEN | FD_FILE_MUST_EXIST
-        dialog = FileDialog(None, 'Selecione o arquivo', wildcard=wildcard, style=style)
-        if dialog.ShowModal() == ID_OK:
-            # Salva o caminho do arquivo e destroi a janela
-            path = dialog.GetPath()
-            dialog.Destroy()
-            app.Destroy()
-            return path
-        else:
-            # Se o usuario cancelou, retorna um caminho vazio
-            path = ""
-            dialog.Destroy()
-            app.Destroy()
-            return path
-
-    def wx_dirdialog(self):
-        """Abre janela de dialogo para abrir pasta
-
-        Retorna:
-            str: caminho da pasta escolhida
-        """
-        app = App(None)
-        dialog = DirDialog (None, "Escolha o diretório", "", DD_DEFAULT_STYLE | DD_DIR_MUST_EXIST)
-        if dialog.ShowModal() == ID_OK:
-            # se o usuario escolher uma pasta, retorna o caminho da pasta
-            path = dialog.GetPath()
-        else:
-            # se o usuario cancelar, retorna None
-            path = None
-        dialog.Destroy()
-        return path
+    
     
 if __name__ == "__main__":
     utils = Utils()
