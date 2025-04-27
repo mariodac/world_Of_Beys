@@ -746,7 +746,7 @@
          "Type": "Balance",
          "SpinDirection": "Right-Spin",
          "System": "Basic Line",
-         "Weight": "",
+         "Weight": "N/A",
          "AttackStat": "40",
          "DefenseStat": "43",
          "StaminaStat": "17"
@@ -758,7 +758,7 @@
          "Type": "Balance",
          "SpinDirection": "Right-Spin",
          "System": "Basic Line",
-         "Weight": "",
+         "Weight": "N/A",
          "AttackStat": "27",
          "DefenseStat": "35",
          "StaminaStat": "38"
@@ -770,7 +770,7 @@
          "Type": "Attack",
          "SpinDirection": "Right-Spin",
          "System": "Basic Line",
-         "Weight": "",
+         "Weight": "N/A",
          "AttackStat": "60",
          "DefenseStat": "27",
          "StaminaStat": "13"
@@ -782,7 +782,7 @@
          "Type": "Balance",
          "SpinDirection": "Right-Spin",
          "System": "Basic Line",
-         "Weight": "",
+         "Weight": "N/A",
          "AttackStat": "22",
          "DefenseStat": "55",
          "StaminaStat": "23"
@@ -794,7 +794,7 @@
          "Type": "Stamina",
          "SpinDirection": "Right-Spin",
          "System": "Basic Line",
-         "Weight": "",
+         "Weight": "N/A",
          "AttackStat": "18",
          "DefenseStat": "27",
          "StaminaStat": "55"
@@ -1181,7 +1181,7 @@
          "System": "Unique Line",
          "AttackStat": "3",
          "StaminaStat": "14",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "7.6",
          "DefenseStat": "12"
       },
@@ -1193,7 +1193,7 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "80",
          "Weight": "6.0",
          "DefenseStat": "8"
       },
@@ -1205,7 +1205,7 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "60",
          "Weight": "6.7",
          "DefenseStat": "N/A"
       },
@@ -1217,7 +1217,7 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "80",
          "Weight": "6.4",
          "DefenseStat": "8"
       },
@@ -1229,7 +1229,7 @@
          "System": "Unique Line",
          "AttackStat": "10",
          "StaminaStat": "8",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "6.4",
          "DefenseStat": "N/A"
       },
@@ -1241,7 +1241,7 @@
          "System": "Unique Line",
          "AttackStat": "15",
          "StaminaStat": "7",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "4.6",
          "DefenseStat": "N/A"
       },
@@ -1253,7 +1253,7 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "85",
          "Weight": "6.6",
          "DefenseStat": "N/A"
       },
@@ -1265,9 +1265,9 @@
          "System": "Unique Line",
          "AttackStat": "12",
          "StaminaStat": "10",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "7.1",
-         "DefenseStat": ""
+         "DefenseStat": "N/A"
       },
       {
          "Abbr.": "7-60",
@@ -1277,9 +1277,9 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "60",
          "Weight": "7.3",
-         "DefenseStat": ""
+         "DefenseStat": "N/A"
       },
       {
          "Abbr.": "7-70",
@@ -1289,9 +1289,9 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "6.3",
-         "DefenseStat": ""
+         "DefenseStat": "N/A"
       },
       {
          "Abbr.": "9-70",
@@ -1301,9 +1301,9 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
-         "Weight": "",
-         "DefenseStat": ""
+         "HeightStat": "70",
+         "Weight": "N/A",
+         "DefenseStat": "N/A"
       },
       {
          "Abbr.": "0-70",
@@ -1313,7 +1313,7 @@
          "System": "Unique Line",
          "AttackStat": "3",
          "StaminaStat": "14",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "7.6",
          "DefenseStat": "12"
       },
@@ -1325,7 +1325,7 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "80",
          "Weight": "6.0",
          "DefenseStat": "8"
       },
@@ -1337,7 +1337,7 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "60",
          "Weight": "6.7",
          "DefenseStat": "N/A"
       },
@@ -1349,7 +1349,7 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "80",
          "Weight": "6.4",
          "DefenseStat": "8"
       },
@@ -1361,7 +1361,7 @@
          "System": "Unique Line",
          "AttackStat": "10",
          "StaminaStat": "8",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "6.4",
          "DefenseStat": "N/A"
       },
@@ -1373,7 +1373,7 @@
          "System": "Unique Line",
          "AttackStat": "15",
          "StaminaStat": "7",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "4.6",
          "DefenseStat": "N/A"
       },
@@ -1385,7 +1385,7 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "85",
          "Weight": "6.6",
          "DefenseStat": "N/A"
       },
@@ -1397,9 +1397,9 @@
          "System": "Unique Line",
          "AttackStat": "12",
          "StaminaStat": "10",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "7.1",
-         "DefenseStat": ""
+         "DefenseStat": "N/A"
       },
       {
          "Abbr.": "7-60",
@@ -1409,9 +1409,9 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "60",
          "Weight": "7.3",
-         "DefenseStat": ""
+         "DefenseStat": "N/A"
       },
       {
          "Abbr.": "7-70",
@@ -1421,9 +1421,9 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
+         "HeightStat": "70",
          "Weight": "6.3",
-         "DefenseStat": ""
+         "DefenseStat": "N/A"
       },
       {
          "Abbr.": "9-70",
@@ -1433,9 +1433,9 @@
          "System": "Unique Line",
          "AttackStat": "N/A",
          "StaminaStat": "N/A",
-         "HeightStat": "",
-         "Weight": "",
-         "DefenseStat": ""
+         "HeightStat": "70",
+         "Weight": "N/A",
+         "DefenseStat": "N/A"
       }
    ],
    "Bits": [
@@ -1773,7 +1773,7 @@
          "StaminaStat": "55",
          "DashStat": "15",
          "BurstResistanceStat": "30",
-         "Weight": ""
+         "Weight": "N/A"
       },
       {
          "Abbr.": "V",
@@ -1787,7 +1787,7 @@
          "StaminaStat": "5",
          "DashStat": "40",
          "BurstResistanceStat": "80",
-         "Weight": ""
+         "Weight": "N/A"
       },
       {
          "Abbr.": "W",
@@ -1801,7 +1801,7 @@
          "StaminaStat": "30",
          "DashStat": "10",
          "BurstResistanceStat": "30",
-         "Weight": ""
+         "Weight": "N/A"
       },
       {
          "Abbr.": "A",
