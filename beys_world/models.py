@@ -30,7 +30,7 @@ class Blade(models.Model):
     stat_attack = models.IntegerField(null=True, blank=True, verbose_name=_("Attack"))
     stat_defense = models.IntegerField(null=True, blank=True, verbose_name=_("Defense"))
     stat_stamina = models.IntegerField(null=True, blank=True, verbose_name=_("Stamina"))
-    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom")
+    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom", blank=True)
     show = models.BooleanField(default=True, verbose_name=_("Show"))
     created_date = models.DateTimeField(
         default=timezone.now, verbose_name=_("Created Date")
@@ -62,7 +62,7 @@ class Ratchet(models.Model):
     stat_attack = models.IntegerField(null=True, blank=True, verbose_name=_("Attack"))
     stat_defense = models.IntegerField(null=True, blank=True, verbose_name=_("Defense"))
     stat_stamina = models.IntegerField(null=True, blank=True, verbose_name=_("Stamina"))
-    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom")
+    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom", blank=True)
     show = models.BooleanField(default=True, verbose_name=_("Show"))
     created_date = models.DateTimeField(
         default=timezone.now, verbose_name=_("Created Date")
@@ -98,7 +98,7 @@ class Bit(models.Model):
         null=True, blank=True, verbose_name=_("Burst Resistance")
     )
     stat_dash = models.IntegerField(null=True, blank=True, verbose_name=_("Dash"))
-    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom")
+    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom", blank=True)
     show = models.BooleanField(default=True, verbose_name=_("Show"))
     created_date = models.DateTimeField(
         default=timezone.now, verbose_name=_("Created Date")
@@ -131,7 +131,7 @@ class LockChip(models.Model):
     system_bey = models.CharField(
         max_length=50, default="N/A", verbose_name=_("System")
     )
-    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom")
+    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom", blank=True)
     show = models.BooleanField(default=True, verbose_name=_("Show"))
     created_date = models.DateTimeField(
         default=timezone.now, verbose_name=_("Created Date")
@@ -165,7 +165,7 @@ class MainBlade(models.Model):
     system_bey = models.CharField(
         max_length=50, default="N/A", verbose_name=_("System")
     )
-    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom")
+    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom", blank=True)
     show = models.BooleanField(default=True, verbose_name=_("Show"))
     created_date = models.DateTimeField(
         default=timezone.now, verbose_name=_("Created Date")
@@ -199,7 +199,7 @@ class AssistBlade(models.Model):
     system_bey = models.CharField(
         max_length=50, default="N/A", verbose_name=_("System")
     )
-    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom")
+    link_fandom = models.URLField(max_length=100, verbose_name="Link Fandom", blank=True)
     show = models.BooleanField(default=True, verbose_name=_("Show"))
     created_date = models.DateTimeField(
         default=timezone.now, verbose_name=_("Created Date")
