@@ -1,5 +1,6 @@
 from utils import Utils
 import pandas as pd
+import re
 from pathlib import Path
 
 
@@ -53,7 +54,9 @@ for name, url in urls.items():
             # adiciona ao dicionario a coluna que contem caminho da imagem
             data_dic.update({f"Image Path": []})
 
-        for element in table.find_all("tr"):
+        tables = table.find_all("tr")
+        for element in tables:
+            id_ = -1
             # ignorar cabeçalhos
             if element.find("th") and table_name != "Assist Blades":
                 continue
@@ -70,8 +73,10 @@ for name, url in urls.items():
                         img_link = "N/A"
             else:
                 img_link = "N/A"
+            img_link = re.sub(r"/revision/latest/(scale-to-width-down/)?\d+\?cb=\d+", "", img_link)
             # adicionar link da imagem ao dicionario
             data_dic.get("Image").append(img_link)
+            id_ += 1
             # realizar criação de pastas
             source_dir = Path(__file__).parent / "downloads"
             source_dir.mkdir(exist_ok=True)
@@ -81,9 +86,22 @@ for name, url in urls.items():
             if img_link != "N/A":
                 # adicionar caminho para imagem baixada ao dicionario
                 file_name = utils.download_file(img_link, download_dir)
-                data_dic.get("Image Path").append(str(download_dir / file_name))
+                complete_path = download_dir / file_name
+                if complete_path.suffix != ".png":
+                    from rembg import remove
+                    from PIL import Image
+                    output_path = complete_path.parent / f"{complete_path.stem}.png"
+                    input = Image.open(complete_path)
+                    output = remove(input)
+                    output.save(output_path)
+                    complete_path = output_path
+
+                json = utils.upload_image_to_imgbb(complete_path)
+                if json:
+                    data_dic.get("Image")[id_] = json.get("url")
+                # data_dic.get("Image Path").append(str(complete_path))
             # obter link da bey
-            link = element.find("a", class_="")
+            link = element.find("a", class_=False)
             if link:
                 link_url = "https://beyblade.fandom.com" + link.get("href")
                 data_dic.get(f"Link {table_name}").append(link_url)
