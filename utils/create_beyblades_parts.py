@@ -1,8 +1,8 @@
 import os
 import sys
 import json
-from datetime import datetime
 from pathlib import Path
+
 
 import django
 from django.conf import settings
@@ -18,6 +18,8 @@ django.setup()
 
 if __name__ == "__main__":
     from beys_world.models import Blade, Ratchet, Bit, LockChip, MainBlade, AssistBlade
+    from utils import Utils
+    utils = Utils()
 
     Blade.objects.all().delete()
     Ratchet.objects.all().delete()
@@ -40,10 +42,18 @@ if __name__ == "__main__":
 
     for item in beyblades_parts.get("Blades"):
 
-        file_name = os.path.basename(item.get("Image Path"))
-        if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
-            path =  item.get("Image Path").replace('%USERPROFILE%', '')
-            file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
+        
+        if item.get("Image") != "N/A" and item.get("Image") != "":
+            if os.name == 'nt':
+                path_download = os.environ["TEMP"]
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            else:
+                path_download = os.environ['TMP']
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            file_name = os.path.basename(path)
+            file_image = open(path, "rb")
             django_blades.append(
                 Blade(
                     name_takara=item.get("Takara Tomy Name"),
@@ -59,7 +69,7 @@ if __name__ == "__main__":
                     stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
                     stat_defense=item.get("DefenseStat") if item.get("DefenseStat") != "N/A" else None,
                     stat_stamina=item.get("StaminaStat") if item.get("StaminaStat") != "N/A" else None,
-                    link_fandom=item.get("Link Blades"),
+                    link_fandom=item.get("Link Blades") if item.get("Link Blades") != "N/A" else "",
                 )
             )
         else:
@@ -74,16 +84,24 @@ if __name__ == "__main__":
                     stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
                     stat_defense=item.get("DefenseStat") if item.get("DefenseStat") != "N/A" else None,
                     stat_stamina=item.get("StaminaStat") if item.get("StaminaStat") != "N/A" else None,
-                    link_fandom=item.get("Link Blades"),
+                    link_fandom=item.get("Link Blades") if item.get("Link Blades") != "N/A" else "",
                 )
             )
 
     for item in beyblades_parts.get("Ratchets"):
 
-        file_name = os.path.basename(item.get("Image Path"))
-        if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
-            path =  item.get("Image Path").replace('%USERPROFILE%', '')
-            file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
+        
+        if item.get("Image") != "N/A" and item.get("Image") != "":
+            if os.name == 'nt':
+                path_download = os.environ["TEMP"]
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            else:
+                path_download = os.environ['TMP']
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            file_name = os.path.basename(path)
+            file_image = open(path, "rb")
             django_ratchets.append(
                 Ratchet(
                     abbreviation=item.get("Abbr."),
@@ -98,7 +116,7 @@ if __name__ == "__main__":
                     stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
                     stat_defense=item.get("DefenseStat") if item.get("DefenseStat") != "N/A" else None,
                     stat_stamina=item.get("StaminaStat") if item.get("StaminaStat") != "N/A" else None,
-                    link_fandom=item.get("Link Ratchets"),
+                    link_fandom=item.get("Link Ratchets") if item.get("Link Ratchets") != "N/A" else "",
                 )
             )
         else:
@@ -112,16 +130,24 @@ if __name__ == "__main__":
                     stat_attack=item.get("AttackStat") if item.get("AttackStat") != "N/A" else None,
                     stat_defense=item.get("DefenseStat") if item.get("DefenseStat") != "N/A" else None,
                     stat_stamina=item.get("StaminaStat") if item.get("StaminaStat") != "N/A" else None,
-                    link_fandom=item.get("Link Ratchets"),
+                    link_fandom=item.get("Link Ratchets") if item.get("Link Ratchets") != "N/A" else "",
                 )
             )
 
     for item in beyblades_parts.get("Bits"):
 
-        file_name = os.path.basename(item.get("Image Path"))
-        if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
-            path =  item.get("Image Path").replace('%USERPROFILE%', '')
-            file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
+        
+        if item.get("Image") != "N/A" and item.get("Image") != "":
+            if os.name == 'nt':
+                path_download = os.environ["TEMP"]
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            else:
+                path_download = os.environ['TMP']
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            file_name = os.path.basename(path)
+            file_image = open(path, "rb")
             django_bits.append(
                 Bit(
                     abbreviation=item.get("Abbr."),
@@ -138,7 +164,7 @@ if __name__ == "__main__":
                     stat_stamina=item.get("StaminaStat") if item.get("StaminaStat") != "N/A" else None,
                     stat_burst=item.get("BurstResistanceStat") if item.get("BurstResistanceStat") != "N/A" else None,
                     stat_dash=item.get("DashStat") if item.get("DashStat") != "N/A" else None,
-                    link_fandom=item.get("Link Bits"),
+                    link_fandom=item.get("Link Bits") if item.get("Link Bits") != "N/A" else "",
                 )
             )
         else:
@@ -154,16 +180,24 @@ if __name__ == "__main__":
                     stat_stamina=item.get("StaminaStat") if item.get("StaminaStat") != "N/A" else None,
                     stat_burst=item.get("BurstResistanceStat") if item.get("BurstResistanceStat") != "N/A" else None,
                     stat_dash=item.get("DashStat") if item.get("DashStat") != "N/A" else None,
-                    link_fandom=item.get("Link Bits"),
+                    link_fandom=item.get("Link Bits") if item.get("Link Bits") != "N/A" else "",
                 )
             )
 
     for item in beyblades_parts.get("Lock Chips"):
 
-        file_name = os.path.basename(item.get("Image Path"))
-        if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
-            path =  item.get("Image Path").replace('%USERPROFILE%', '')
-            file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
+        
+        if item.get("Image") != "N/A" and item.get("Image") != "":
+            if os.name == 'nt':
+                path_download = os.environ["TEMP"]
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            else:
+                path_download = os.environ['TMP']
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            file_name = os.path.basename(path)
+            file_image = open(path, "rb")
             django_lock_chips.append(
                 LockChip(
                     name_takara=item.get("Takara Tomy Name"),
@@ -175,7 +209,7 @@ if __name__ == "__main__":
                     spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
-                    link_fandom=item.get("Link Lock Chips"),
+                    link_fandom=item.get("Link Lock Chips") if item.get("Link Lock Chips") != "N/A" else "",
                 )
             )
         else:
@@ -186,17 +220,25 @@ if __name__ == "__main__":
                     spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
-                    link_fandom=item.get("Link Lock Chips"),
+                    link_fandom=item.get("Link Lock Chips") if item.get("Link Lock Chips") != "N/A" else "",
                 )
             )
 
 
     for item in beyblades_parts.get("Main Blades"):
 
-        file_name = os.path.basename(item.get("Image Path"))
-        if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
-            path =  item.get("Image Path").replace('%USERPROFILE%', '')
-            file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
+        
+        if item.get("Image") != "N/A" and item.get("Image") != "":
+            if os.name == 'nt':
+                path_download = os.environ["TEMP"]
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            else:
+                path_download = os.environ['TMP']
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            file_name = os.path.basename(path)
+            file_image = open(path, "rb")
             django_main_blades.append(
                 MainBlade(
                     name_takara=item.get("Takara Tomy Name"),
@@ -209,7 +251,7 @@ if __name__ == "__main__":
                     spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
-                    link_fandom=item.get("Link Main Blades"),
+                    link_fandom=item.get("Link Main Blades") if item.get("Link Main Blades") != "N/A" else "",
                 )
             )
         else:
@@ -221,16 +263,24 @@ if __name__ == "__main__":
                     spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
-                    link_fandom=item.get("Link Main Blades"),
+                    link_fandom=item.get("Link Main Blades") if item.get("Link Main Blades") != "N/A" else "",
                 )
             )
 
     for item in beyblades_parts.get("Assist Blades"):
 
-        file_name = os.path.basename(item.get("Image Path"))
-        if item.get("Image Path") != "N/A" and item.get("Image Path") != "":
-            path =  item.get("Image Path").replace('%USERPROFILE%', '')
-            file_image = open(os.path.normpath(os.environ['USERPROFILE'] + path), "rb")
+        
+        if item.get("Image") != "N/A" and item.get("Image") != "":
+            if os.name == 'nt':
+                path_download = os.environ["TEMP"]
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            else:
+                path_download = os.environ['TMP']
+                path = utils.download_file(item.get("Image"), path_download)
+                path = os.path.join(path_download, path)
+            file_name = os.path.basename(path)
+            file_image = open(path, "rb")
             django_assist_blades.append(
                 AssistBlade(
                     abbreviation=item.get("Abbr."),
@@ -243,7 +293,7 @@ if __name__ == "__main__":
                     spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
-                    link_fandom=item.get("Link Assist Blades"),
+                    link_fandom=item.get("Link Assist Blades") if item.get("Link Assist Blades") != "N/A" else "",
                 )
             )
         else:
@@ -255,7 +305,7 @@ if __name__ == "__main__":
                     spin_direction=item.get("SpinDirection"),
                     weight= item.get("Weight") if item.get("Weight") != "N/A" else None,
                     system_bey=item.get("System"),
-                    link_fandom=item.get("Link Assist Blades"),
+                    link_fandom=item.get("Link Assist Blades") if item.get("Link Assist Blades") != "N/A" else "",
                 )
             )
 
