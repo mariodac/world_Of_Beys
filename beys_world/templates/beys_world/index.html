@@ -79,7 +79,7 @@
                 </div>
             </div>
         </div> -->
-        {% for blade in blades %}
+        {% comment %} {% for blade in blades %}
             <div class="blade-card bg-white rounded-xl overflow-hidden shadow-md hover-pulse">
                 <div class="relative pt-[100%]">
                     {% if blade.image %}
@@ -101,6 +101,37 @@
                     {% endif %}
                 </div>
             </div>
+        {% endfor %} {% endcomment %}
+
+        {% for parts in all_parts %}
+        {% for part in parts  %}
+        <div class="blade-card bg-white rounded-xl overflow-hidden shadow-md hover-pulse">
+                <div class="relative pt-[100%]">
+                    {% if part.image %}
+                        <img src="{{ part.image.url }}" alt="part" class="absolute top-0 left-0 w-full h-full object-cover">
+                    {% else %}
+                        <img src="{% static 'global/images/No_image_available.svg.png' %}" alt="No image" class="absolute top-0 left-0 w-full h-full object-cover">
+                    {% endif %}
+                    <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        {{ part.type_bey }}
+                    </div>
+                    <div class="absolute top-2 left-2 bg-purple-500 text-white test-{{ part.system_bey }} text-xs font-bold px-2 py-1 rounded-full">
+                        {{ part.system_bey }}
+                    </div>
+                </div>
+
+                <div class="p-4">
+                    {% if part.name_takara != "N/A"%}
+                        <h3 class="font-bold text-gray-800 text-center"><a href="#" class="hover:text-blue-500 transition-colors">{{ part.name_takara }}</a></h3>
+                    {% else %}
+                        <h3 class="font-bold text-gray-800 text-center"><a href="#" class="hover:text-blue-500 transition-colors">{{ part.name_hasbro }}</a></h3>
+                    {% endif %}
+                    {% if part.abbreviation != "N/A" %}
+                        <h3 class="font-bold text-gray-800 text-center"><a href="#" class="hover:text-blue-500 transition-colors">{{ part.abbreviation }}</a></h3>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
         {% endfor %}
 
     </div>

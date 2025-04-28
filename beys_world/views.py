@@ -9,13 +9,9 @@ def index(request):
     lock_chips = LockChip.objects.all().filter(show=True)
     main_blades = MainBlade.objects.all().filter(show=True)
     assist_blades = AssistBlade.objects.all().filter(show=True)
+    parts = [blades, ratchets, bits, lock_chips, main_blades, assist_blades]
     context = {
-        'blades': blades,
-        'ratchets': ratchets,
-        'bits': bits,
-        'lock_chips': lock_chips,
-        'main_blades': main_blades,
-        'assist_blades': assist_blades,
+        'all_parts': parts,
         'title': 'index',
     }
     return render(
