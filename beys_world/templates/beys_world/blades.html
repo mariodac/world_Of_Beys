@@ -1,0 +1,139 @@
+{% extends 'global/base.html' %}
+{% load i18n %}
+{% load static %}
+{% block content %}
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <i>
+                        <img src="{% static 'global/images/beyx2.jpg' %}" alt="Ícone Beyblade X" class="w-6 h-6">
+                    </i>
+                    <h1 class="text-2xl font-bold text-gray-800">Beyblade Blades Collection</h1>
+                </div>
+                <div class="relative w-full md:w-64">
+                    <input type="text" placeholder="Search blades..." class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                    <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                        <i class="fas fa-search text-gray-400"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Filters -->
+    <div class="mb-8">
+        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4 md:mb-0">Filter Blades</h2>
+            <div class="flex flex-wrap gap-2">
+                <button class="filter-btn active px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-blue-500 hover:text-white transition-colors">
+                    All
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-blue-500 hover:text-white transition-colors">
+                    Attack
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-blue-500 hover:text-white transition-colors">
+                    Defense
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-blue-500 hover:text-white transition-colors">
+                    BX System
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-blue-500 hover:text-white transition-colors">
+                    UX System
+                </button>
+                <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 font-medium hover:bg-blue-500 hover:text-white transition-colors">
+                    CX System
+                </button>
+            </div>
+        </div>
+        <div class="flex items-center justify-end">
+            <label for="sort" class="mr-2 text-sm font-medium text-gray-700">Sort by:</label>
+            <select id="sort" class="px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <option value="name">Name</option>
+                <option value="attack">Attack (High to Low)</option>
+                <option value="defense">Defense (High to Low)</option>
+                <option value="stamina">Stamina (High to Low)</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Blades Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <!-- Blade Card 1 -->
+        <!-- <div class="blade-card bg-white rounded-xl overflow-hidden shadow-md hover-pulse">
+            <div class="relative pt-[100%]">
+                <img src="https://via.placeholder.com/300/3b82f6/ffffff?text=Valkyrie" alt="Valkyrie" class="absolute top-0 left-0 w-full h-full object-cover">
+                <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                    Attack
+                </div>
+            </div>
+            <div class="p-4">
+                <h3 class="font-bold text-gray-800 text-center">Valkyrie</h3>
+                <p class="text-sm text-gray-500 text-center">Valtryek (Hasbro)</p>
+                <div class="flex justify-center mt-2 space-x-1">
+                    <span class="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span class="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span class="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span class="inline-block w-2 h-2 rounded-full bg-blue-500"></span>
+                    <span class="inline-block w-2 h-2 rounded-full bg-gray-300"></span>
+                </div>
+            </div>
+        </div> -->
+        {% comment %} {% for blade in blades %}
+            <div class="blade-card bg-white rounded-xl overflow-hidden shadow-md hover-pulse">
+                <div class="relative pt-[100%]">
+                    {% if blade.image %}
+                        <img src="{{ blade.image.url }}" alt="Valkyrie" class="absolute top-0 left-0 w-full h-full object-cover">
+                    {% endif %}
+                    <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        {{ blade.type_bey }}
+                    </div>
+                    <div class="absolute top-2 left-2 bg-purple-500 text-white test-{{ blade.system_bey }} text-xs font-bold px-2 py-1 rounded-full">
+                        {{ blade.system_bey }}
+                    </div>
+                </div>
+
+                <div class="p-4">
+                    {% if blade.name_takara != "N/A"%}
+                        <h3 class="font-bold text-gray-800 text-center"><a href="#" class="hover:text-blue-500 transition-colors">{{ blade.name_takara }}</a></h3>
+                    {% else %}
+                    <h3 class="font-bold text-gray-800 text-center"><a href="#" class="hover:text-blue-500 transition-colors">{{ blade.name_hasbro }}</a></h3>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %} {% endcomment %}
+
+        {% for parts in all_parts %}
+        {% for part in parts  %}
+        <div class="blade-card bg-white rounded-xl overflow-hidden shadow-md hover-pulse">
+                <div class="relative pt-[100%]">
+                    {% if part.image %}
+                        <img src="{{ part.image.url }}" alt="part" class="absolute top-0 left-0 w-full h-full object-cover">
+                    {% else %}
+                        <img src="{% static 'global/images/No_image_available.svg.png' %}" alt="No image" class="absolute top-0 left-0 w-full h-full object-cover">
+                    {% endif %}
+                    <div class="absolute top-2 right-2 bg-blue-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                        {{ part.type_bey }}
+                    </div>
+                    <div class="absolute top-2 left-2 bg-purple-500 text-white test-{{ part.system_bey }} text-xs font-bold px-2 py-1 rounded-full">
+                        {{ part.system_bey }}
+                    </div>
+                </div>
+
+                <div class="p-4">
+                    {% if part.name_takara != "N/A"%}
+                        <h3 class="font-bold text-gray-800 text-center"><a href="#" class="hover:text-blue-500 transition-colors">{{ part.name_takara }}</a></h3>
+                    {% else %}
+                        <h3 class="font-bold text-gray-800 text-center"><a href="#" class="hover:text-blue-500 transition-colors">{{ part.name_hasbro }}</a></h3>
+                    {% endif %}
+                    {% if part.abbreviation != "N/A" %}
+                        <h3 class="font-bold text-gray-800 text-center"><a href="#" class="hover:text-blue-500 transition-colors">{{ part.abbreviation }}</a></h3>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        {% endfor %}
+
+    </div>
+
+{% endblock content %}
