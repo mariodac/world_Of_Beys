@@ -5,7 +5,7 @@ function toggleTheme() {
     const toggleBtn = document.getElementById("themeToggle");
     root.setAttribute("data-theme", newTheme);
     const icon = newTheme === "dark" ? "☀️" : "🌙";
-    const text = newTheme === "dark" ? "Modo claro" : "Modo escuro";
+    const text = newTheme === "dark" ? "Light mode" : "Dark mode";
     toggleBtn.innerText = `${icon} ${text}`;
     toggleBtn.setAttribute("data-icon", icon);
     localStorage.setItem("theme", newTheme);

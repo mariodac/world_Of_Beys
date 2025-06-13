@@ -1,39 +1,41 @@
+{% load i18n %}
 <nav>
     <div class="nav-left">
-        <a href="#" class="logo">🏠 Home</a>
+        <a href="{% url 'beys_world:index' %}" class="logo">🏠 Home</a>
         <button class="menu-toggle" id="menuToggle" onclick="toggleMenu();">☰</button>
     </div>
 
     <div class="nav-right">
         <div class="menu" id="menu">
             <ul>
-                <li><a href="#">Cadastro de Usuário</a></li>
-                <li><a href="#">Login de Usuário</a></li>
+                <li><a href="#">{% translate "Register User" %}</a></li>
+                <li><a href="#">Login</a></li>
                 <li class="dropdown">
-                    <button onclick="toggleDropdown(event)">Cadastro de Partes</button>
+                    <button onclick="toggleDropdown(event)">{% translate "Register Parts" %}</button>
                     <div class="dropdown-content">
-                        <a href="#">Blade</a>
-                        <a href="#">Ratchet</a>
-                        <a href="#">Bit</a>
+                        <a href="#">{% translate "Blade" %}</a>
+                        <a href="#">{% translate "Ratchet" %}</a>
+                        <a href="#">{% translate "Bit" %}</a>
                         <a href="#">Lockchip</a>
-                        <a href="#">Mainblade</a>
-                        <a href="#">Assistblade</a>
+                        <a href="#">{% translate "MainBlade" %}</a>
+                        <a href="#">{% translate "AssistBlade" %}</a>
                     </div>
                 </li>
                 <li class="dropdown">
-                    <button onclick="toggleDropdown(event)">Exibir Partes</button>
+                    <button onclick="toggleDropdown(event)">{% translate "Show parts" %}</button>
                     <div class="dropdown-content">
-                        <a href="#">Blade</a>
-                        <a href="#">Ratchet</a>
-                        <a href="#">Bit</a>
+                        <a href="{% url 'beys_world:all_parts' %}">{% translate "All parts" %}</a>
+                        <a href="#">{% translate "Blade" %}</a>
+                        <a href="#">{% translate "Ratchet" %}</a>
+                        <a href="#">{% translate "Bit" %}</a>
                         <a href="#">Lockchip</a>
-                        <a href="#">Mainblade</a>
-                        <a href="#">Assistblade</a>
+                        <a href="#">{% translate "MainBlade" %}</a>
+                        <a href="#">{% translate "AssistBlade" %}</a>
                     </div>
                 </li>
             </ul>
         </div>
 
-        <button class="toggle-theme" onclick="toggleTheme();" id="themeToggle" data-icon="🌙">🌙 Modo escuro</button>
+        <button class="toggle-theme" onclick="toggleTheme();" id="themeToggle" data-icon="🌙">🌙 {% translate "Dark mode" %}</button>
     </div>
 </nav>

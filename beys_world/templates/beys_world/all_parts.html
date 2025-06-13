@@ -1,0 +1,132 @@
+
+{% extends 'global/base.html' %} 
+{% load i18n %} 
+{% block content %}
+<h1>{% translate "All parts Beyblade" %}</h1>
+
+<div class="controls">
+    <input type="text" id="searchInput" placeholder="Pesquisar partes..." />
+    <select id="filterType">
+        <option value="">{% translate "All parts" %}</option>
+        <option value="Blade">{% translate "Blade" %}</option>
+        <option value="Ratchet">{% translate "Ratchet" %}</option>
+        <option value="Bit">{% translate "Bit" %}</option>
+        <option value="Lockchip">Lockchip</option>
+        <option value="Mainblade">{% translate "MainBlade" %}</option>
+        <option value="Assistblade">{% translate "AssistBlade" %}</option>
+    </select>
+    <button onclick="sortParts()">{% translate "Sort" %} A-Z</button>
+    <button onclick="applyFilters()">{% translate "Filter" %}</button>
+</div>
+
+<div class="parts-section" data-type="Blade">
+    <h2>{% translate "Blades" %}</h2>
+    <div class="parts-list">
+        {% for blade in parts.blades %}
+        {% if blade.name_takara == "N/A" %}
+            <div class="part" data-name="{{ blade.name_hasbro }}" data-type="Blade">
+                    <img src="{{ blade.image.url  }}" alt="{{ blade.name_hasbro }}" style="width: 100%; border-radius: 4px; margin-bottom: 0.5rem;">
+                    <h3>{{ blade.name_hasbro }}</h3>
+            {% else %}
+            <div class="part" data-name="{{ blade.name_takara }}" data-type="Blade">
+                <img src="{{ blade.image.url  }}" alt="{{ blade.name_takara }}" style="width: 100%; border-radius: 4px; margin-bottom: 0.5rem;">
+                <h3>{{ blade.name_takara }}</h3>
+            {% endif %}
+            
+            <p>{% translate "Part" %}: {% translate "Blade" %}</p>
+            <button class="toggle-btn" onclick="toggleVisibility(this)">
+                <i class="fas fa-eye-slash"></i>
+            </button>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="parts-section" data-type="Ratchet">
+    <h2>{% translate "Ratchets" %}</h2>
+    <div class="parts-list">
+        {% for ratchet in parts.ratchets %}
+            <div class="part" data-name="{{ ratchet.abbreviation }}" data-type="Ratchet">
+                    <img src="{{ ratchet.image.url  }}" alt="{{ ratchet.abbreviation }}" style="width: 100%; border-radius: 4px; margin-bottom: 0.5rem;">
+                    <h3>{{ ratchet.abbreviation }}</h3>
+                
+                    <p>{% translate "Part" %}: {% translate "Ratchet" %}</p>
+                    <button class="toggle-btn" onclick="toggleVisibility(this)">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="parts-section" data-type="Bit">
+    <h2>{% translate "Bit" %}</h2>
+    <div class="parts-list">
+        {% for bit in parts.bits %}
+            <div class="part" data-name="{{ bit.name }}" data-type="Bit">
+                    <img src="{{ bit.image.url  }}" alt="{{ bit.name }}" style="width: 100%; border-radius: 4px; margin-bottom: 0.5rem;">
+                    <h3>{{ bit.name }}</h3>
+                
+                    <p>{% translate "Part" %}: {% translate "Bit" %}</p>
+                    <button class="toggle-btn" onclick="toggleVisibility(this)">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="parts-section" data-type="LockChip">
+    <h2>LockChip</h2>
+    <div class="parts-list">
+        {% for lockchips in parts.lockchipss %}
+            <div class="part" data-name="{{ lockchips.name_takara }}" data-type="LockChip">
+                <img src="{{ lockchips.image.url  }}" alt="{{ lockchips.name_takara }}" style="width: 100%; border-radius: 4px; margin-bottom: 0.5rem;">
+                <h3>{{ lockchips.name_takara }}</h3>
+            
+                <p>{% translate "Part" %}: LockChip</p>
+                <button class="toggle-btn" onclick="toggleVisibility(this)">
+                    <i class="fas fa-eye-slash"></i>
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="parts-section" data-type="AssistBlade">
+    <h2>{% translate "AssistBlade" %}</h2>
+    <div class="parts-list">
+        {% for assist_blade in parts.assist_blades %}
+            <div class="part" data-name="{{ assist_blade.name_takara }}" data-type="AssistBlade">
+                    <img src="{{ assist_blade.image.url  }}" alt="{{ assist_blade.name_takara }}" style="width: 100%; border-radius: 4px; margin-bottom: 0.5rem;">
+                    <h3>{{ assist_blades.name_takara }}</h3>
+                
+                    <p>{% translate "Part" %}: {% translate "AssistBlade" %}</p>
+                    <button class="toggle-btn" onclick="toggleVisibility(this)">
+                        <i class="fas fa-eye-slash"></i>
+                    </button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="parts-section" data-type="MainBlade">
+    <h2>{% translate "MainBlade" %}</h2>
+    <div class="parts-list">
+        {% for main_blade in parts.main_blades %}
+            <div class="part" data-name="{{ main_blade.name_takara }}" data-type="MainBlade">
+                {% if main_balde.image != None %}
+                    <img src="{{ main_blade.image.url  }}" alt="{{ main_blade.name_takara }}" style="width: 100%; border-radius: 4px; margin-bottom: 0.5rem;">
+                {% endif %}
+                <h3>{{ main_blade.name_takara }}</h3>
+            
+                <p>{% translate "Part" %}: {% translate "MainBlade" %}</p>
+                <button class="toggle-btn" onclick="toggleVisibility(this)">
+                    <i class="fas fa-eye-slash"></i>
+                </button>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+

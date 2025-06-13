@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-16 20:47-0300\n"
+"POT-Creation-Date: 2025-06-13 04:18-0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,114 +18,198 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\base_templates\global\base.html:13 .\beys_world\models.py:9
-msgid "Blades"
-msgstr "Lâminas"
+#: .\base_templates\global\partials\_head.html:10
+msgid "World of Beys"
+msgstr "Mundo das Beys"
 
-#: .\base_templates\global\base.html:20
-msgid "grams"
-msgstr "gramas"
+#: .\base_templates\global\partials\_navbar.html:11
+msgid "Register User"
+msgstr "Registrar usuário"
 
-#: .\beys_world\models.py:8
+#: .\base_templates\global\partials\_navbar.html:14
+msgid "Register Parts"
+msgstr "Registrar partes"
+
+#: .\base_templates\global\partials\_navbar.html:16
+#: .\base_templates\global\partials\_navbar.html:28 .\beys_world\models.py:8
+#: .\beys_world\templates\beys_world\all_parts.html:11
+#: .\beys_world\templates\beys_world\all_parts.html:36
 msgid "Blade"
 msgstr "Lâmina"
 
-#: .\beys_world\models.py:12 .\beys_world\models.py:123
-#: .\beys_world\models.py:156
+#: .\base_templates\global\partials\_navbar.html:17
+#: .\base_templates\global\partials\_navbar.html:29 .\beys_world\models.py:45
+#: .\beys_world\templates\beys_world\all_parts.html:12
+#: .\beys_world\templates\beys_world\all_parts.html:53
+msgid "Ratchet"
+msgstr "Engrenagem"
+
+#: .\base_templates\global\partials\_navbar.html:18
+#: .\base_templates\global\partials\_navbar.html:30 .\beys_world\models.py:77
+#: .\beys_world\templates\beys_world\all_parts.html:13
+#: .\beys_world\templates\beys_world\all_parts.html:63
+#: .\beys_world\templates\beys_world\all_parts.html:70
+msgid "Bit"
+msgstr "Ponta"
+
+#: .\base_templates\global\partials\_navbar.html:20
+#: .\base_templates\global\partials\_navbar.html:32
+#: .\beys_world\templates\beys_world\all_parts.html:15
+#: .\beys_world\templates\beys_world\all_parts.html:114
+#: .\beys_world\templates\beys_world\all_parts.html:123
+#, fuzzy
+#| msgid "Blade"
+msgid "MainBlade"
+msgstr "Lâmina principal"
+
+#: .\base_templates\global\partials\_navbar.html:21
+#: .\base_templates\global\partials\_navbar.html:33
+#: .\beys_world\templates\beys_world\all_parts.html:16
+#: .\beys_world\templates\beys_world\all_parts.html:97
+#: .\beys_world\templates\beys_world\all_parts.html:104
+#, fuzzy
+#| msgid "Blade"
+msgid "AssistBlade"
+msgstr "Lâmina assistência"
+
+#: .\base_templates\global\partials\_navbar.html:25
+msgid "Show parts"
+msgstr "Exibir partes"
+
+#: .\base_templates\global\partials\_navbar.html:27
+#: .\beys_world\templates\beys_world\all_parts.html:10
+msgid "All parts"
+msgstr "Todas as partes"
+
+#: .\base_templates\global\partials\_navbar.html:39
+msgid "Dark mode"
+msgstr "Modo escuro"
+
+#: .\base_templates\global\partials\_navbar.html:39
+msgid "Light mode"
+msgstr "Mode claro"
+
+#: .\beys_world\models.py:9 .\beys_world\templates\beys_world\all_parts.html:23
+msgid "Blades"
+msgstr "Lâminas"
+
+#: .\beys_world\models.py:12 .\beys_world\models.py:117
+#: .\beys_world\models.py:150
 msgid "Takara Tomy Name"
 msgstr "Takara Tomy Nome"
 
-#: .\beys_world\models.py:15 .\beys_world\models.py:126
-#: .\beys_world\models.py:159 .\beys_world\models.py:193
+#: .\beys_world\models.py:15 .\beys_world\models.py:120
+#: .\beys_world\models.py:153
 msgid "Hasbro Name"
 msgstr "Hasbro Nome"
 
 #: .\beys_world\models.py:18 .\beys_world\models.py:53
-#: .\beys_world\models.py:88 .\beys_world\models.py:129
-#: .\beys_world\models.py:162 .\beys_world\models.py:196
+#: .\beys_world\models.py:85 .\beys_world\models.py:123
+#: .\beys_world\models.py:156 .\beys_world\models.py:190
 msgid "Image"
 msgstr "Imagem"
 
 #: .\beys_world\models.py:20 .\beys_world\models.py:55
-#: .\beys_world\models.py:90 .\beys_world\models.py:164
-#: .\beys_world\models.py:198
+#: .\beys_world\models.py:87 .\beys_world\models.py:158
+#: .\beys_world\models.py:192
 msgid "Type"
 msgstr "Tipo"
 
-#: .\beys_world\models.py:22 .\beys_world\models.py:57
-#: .\beys_world\models.py:92 .\beys_world\models.py:132
-#: .\beys_world\models.py:166 .\beys_world\models.py:200
+#: .\beys_world\models.py:22 .\beys_world\models.py:126
+#: .\beys_world\models.py:160 .\beys_world\models.py:194
 msgid "Spin Direction"
 msgstr "Direção de Rotação"
 
-#: .\beys_world\models.py:25 .\beys_world\models.py:60
-#: .\beys_world\models.py:95 .\beys_world\models.py:135
-#: .\beys_world\models.py:169 .\beys_world\models.py:203
+#: .\beys_world\models.py:25 .\beys_world\models.py:57
+#: .\beys_world\models.py:89 .\beys_world\models.py:129
+#: .\beys_world\models.py:163 .\beys_world\models.py:197
 msgid "Weight"
 msgstr "Peso"
 
-#: .\beys_world\models.py:28 .\beys_world\models.py:63
-#: .\beys_world\models.py:98 .\beys_world\models.py:138
-#: .\beys_world\models.py:172 .\beys_world\models.py:206
+#: .\beys_world\models.py:28 .\beys_world\models.py:60
+#: .\beys_world\models.py:92 .\beys_world\models.py:132
+#: .\beys_world\models.py:166 .\beys_world\models.py:200
 msgid "System"
 msgstr "Sistema"
 
-#: .\beys_world\models.py:30 .\beys_world\models.py:65
-#: .\beys_world\models.py:100
+#: .\beys_world\models.py:30 .\beys_world\models.py:62
+#: .\beys_world\models.py:94
 msgid "Attack"
 msgstr "Ataque"
 
-#: .\beys_world\models.py:31 .\beys_world\models.py:66
-#: .\beys_world\models.py:101
+#: .\beys_world\models.py:31 .\beys_world\models.py:63
+#: .\beys_world\models.py:95
 msgid "Defense"
 msgstr "Defesa"
 
-#: .\beys_world\models.py:32 .\beys_world\models.py:67
-#: .\beys_world\models.py:102
+#: .\beys_world\models.py:32 .\beys_world\models.py:64
+#: .\beys_world\models.py:96
 msgid "Stamina"
 msgstr "Resistência"
 
-#: .\beys_world\models.py:34 .\beys_world\models.py:69
-#: .\beys_world\models.py:108 .\beys_world\models.py:141
-#: .\beys_world\models.py:175 .\beys_world\models.py:209
+#: .\beys_world\models.py:34 .\beys_world\models.py:66
+#: .\beys_world\models.py:102 .\beys_world\models.py:135
+#: .\beys_world\models.py:169 .\beys_world\models.py:203
 msgid "Show"
 msgstr "Exibir"
 
-#: .\beys_world\models.py:36 .\beys_world\models.py:71
-#: .\beys_world\models.py:110 .\beys_world\models.py:143
-#: .\beys_world\models.py:177 .\beys_world\models.py:211
+#: .\beys_world\models.py:36 .\beys_world\models.py:68
+#: .\beys_world\models.py:104 .\beys_world\models.py:137
+#: .\beys_world\models.py:171 .\beys_world\models.py:205
 msgid "Created Date"
 msgstr "Data de Criação"
 
-#: .\beys_world\models.py:45
-msgid "Ratchet"
-msgstr "Engrenagem"
-
 #: .\beys_world\models.py:46
+#: .\beys_world\templates\beys_world\all_parts.html:46
 msgid "Ratchets"
 msgstr "Engrenagens"
 
-#: .\beys_world\models.py:49 .\beys_world\models.py:84
-#: .\beys_world\models.py:190
+#: .\beys_world\models.py:49 .\beys_world\models.py:81
+#: .\beys_world\models.py:184
 msgid "Abbreviation"
 msgstr "Abreviação"
 
-#: .\beys_world\models.py:51 .\beys_world\models.py:86
+#: .\beys_world\models.py:51 .\beys_world\models.py:83
+#: .\beys_world\models.py:187
 msgid "Name"
 msgstr "Nome"
 
-#: .\beys_world\models.py:80
-msgid "Bit"
-msgstr "Ponta"
-
-#: .\beys_world\models.py:81
+#: .\beys_world\models.py:78
 msgid "Bits"
 msgstr "Pontas"
 
-#: .\beys_world\models.py:104
+#: .\beys_world\models.py:98
 msgid "Burst Resistance"
 msgstr "Resistência a Eclosão"
 
-#: .\beys_world\models.py:106
+#: .\beys_world\models.py:100
 msgid "Dash"
 msgstr "Avanço"
+
+#: .\beys_world\templates\beys_world\all_parts.html:5
+msgid "All parts Beyblade"
+msgstr "Partes de Beyblades"
+
+#: .\beys_world\templates\beys_world\all_parts.html:18
+msgid "Sort"
+msgstr "Ordenar"
+
+#: .\beys_world\templates\beys_world\all_parts.html:19
+msgid "Filter"
+msgstr "Filtrar"
+
+#: .\beys_world\templates\beys_world\all_parts.html:36
+#: .\beys_world\templates\beys_world\all_parts.html:53
+#: .\beys_world\templates\beys_world\all_parts.html:70
+#: .\beys_world\templates\beys_world\all_parts.html:87
+#: .\beys_world\templates\beys_world\all_parts.html:104
+#: .\beys_world\templates\beys_world\all_parts.html:123
+msgid "Part"
+msgstr "Parte"
+
+#: .\beys_world\views.py:16
+msgid "All Parts"
+msgstr "Todas as partes"
+
+#~ msgid "grams"
+#~ msgstr "gramas"

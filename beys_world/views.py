@@ -1,6 +1,5 @@
 from django.shortcuts import render
-
-from beys_world.models import AssistBlade, Bit, Blade, LockChip, MainBlade, Ratchet
+from django.utils.translation import gettext_lazy as _ 
 
 def index(request):
     context = {
@@ -14,7 +13,7 @@ def index(request):
 
 def all_parts(request):
     context = {
-        "title": "All Parts",
+        "title": _("All Parts"),
     }
     return render(
         request,
