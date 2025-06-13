@@ -8,8 +8,8 @@ function toggleTheme() {
     const text = newTheme === "dark" ? "Modo claro" : "Modo escuro";
     toggleBtn.innerText = `${icon} ${text}`;
     toggleBtn.setAttribute("data-icon", icon);
+    localStorage.setItem("theme", newTheme);
 }
-
 function toggleMenu() {
     const menu = document.getElementById("menu");
     const button = document.getElementById("menuToggle");
@@ -31,6 +31,8 @@ function toggleDropdown(event) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", savedTheme);
     document.querySelectorAll(".dropdown").forEach((dropdown) => {
         dropdown.addEventListener("mouseenter", () => {
             dropdown.classList.add("open");
@@ -43,3 +45,33 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+function toggleVisibility(btn) {
+    const part = btn.closest(".part");
+    part.classList.toggle("hidden");
+}
+
+function applyFilters() {
+    const search = document.getElementById("searchInput").value.toLowerCase();
+    const type = document.getElementById("filterType").value;
+    const parts = document.querySelectorAll(".part");
+
+    parts.forEach((part) => {
+        const name = part.dataset.name.toLowerCase();
+        const ptype = part.dataset.type;
+        const matchSearch = name.includes(search);
+        const matchType = type === "" || type === ptype;
+        part.style.display = matchSearch && matchType ? "block" : "none";
+    });
+}
+
+function sortParts() {
+    const container = document.getElementById("partsList");
+    const parts = Array.from(container.querySelectorAll(".part"));
+
+    parts.sort((a, b) => {
+        return a.dataset.name.localeCompare(b.dataset.name);
+    });
+
+    parts.forEach((p) => container.appendChild(p));
+}
