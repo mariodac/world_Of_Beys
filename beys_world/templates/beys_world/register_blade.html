@@ -1,0 +1,98 @@
+{% extends 'global/base.html' %} 
+{% load i18n %} 
+{% load static %}
+{% block content %}
+<h1>Registrar Blade</h1>
+<form action="#" method="post" enctype="multipart/form-data">
+    <label for="name_takara" class="form-label"><i class="fas fa-signature"></i> Nome Takara</label>
+    <input type="text" id="name_takara" name="name_takara" required>
+
+    <label for="name_hasbro" class="form-label"><i class="fas fa-signature"></i> Nome Hasbro</label>
+    <input type="text" id="name_hasbro" name="name_hasbro" required>
+
+    <label for="image" class="form-label"><i class="fas fa-image"></i> Imagem</label>
+    <input type="file" id="image" name="image" accept="image/*" required onchange="previewImage(event)">
+    <img id="preview" class="image-preview" alt="Pré-visualização da imagem">
+
+    <label for="type_bey" class="form-label">
+        <img class="icon-logo" src="{% static 'global/images/Type.png' %}" alt="Type logo"> Tipo
+    </label>
+    <div class="custom-select-container">
+        <div class="custom-select-selected" onclick="toggleDropdownType(event)">
+        <i id="selected-type-icon" class="fa-solid fa-window-restore"></i>
+        <span id="selected-text">Selecione o tipo</span>
+        </div>
+        <ul class="custom-select-options" id="dropdown">
+        <li onclick="selectOption(this)" data-value="Attack">
+            <img src='{% static "images/Attack_Logo.png" %}' class="icon-logo"> Attack
+        </li>
+        <li onclick="selectOption(this)" data-value="Defense">
+            <img src='{% static "images/Defense_Logo.png" %}' class="icon-logo"> Defense
+        </li>
+        <li onclick="selectOption(this)" data-value="Stamina">
+            <img src='{% static "images/Stamina_Logo.png" %}' class="icon-logo"> Stamina
+        </li>
+        <li onclick="selectOption(this)" data-value="Balance">
+            <img src='{% static "images/Balance_Logo.png" %}' class="icon-logo"> Balance
+        </li>
+        </ul>
+        <input type="hidden" id="type_bey" name="type_bey">
+    </div>
+
+    <label for="spin_direction" class="form-label">
+        <i class="fas fa-sync-alt"></i> Direção de rotação
+    </label>
+    <div class="radio-group">
+        <label class="radio-option">
+            <input type="radio" id="right_spin" name="spin_direction" value="Right-Spin" required>
+            <img class="icon-logo" src="right-spin.png" alt="Right-Spin logo">
+            Right-Spin
+        </label>
+        <label class="radio-option">
+            <input type="radio" id="left_spin" name="spin_direction" value="Left-Spin">
+            <img class="icon-logo" src="left-spin.png" alt="Left-Spin logo">
+            Left-Spin
+        </label>
+    </div>
+
+    <label for="weight" class="form-label"><i class="fas fa-weight-hanging"></i> Peso</label>
+    <input type="number" step="0.01" id="weight" name="weight" required>
+
+    <label for="system_bey" class="form-label">
+        <i class="fas fa-cogs"></i> Sistema
+    </label>
+    <div class="custom-select-container">
+        <div class="custom-select-selected" onclick="toggleDropdownSystem(event)">
+        <i id="selected-system-icon" class="fa-solid fa-window-restore"></i>
+        <span id="selected-system-text">Selecione o sistema</span>
+        </div>
+        <ul class="custom-select-options" id="dropdown-system">
+        <li onclick="selectSystem(this)" data-value="Basic Line">
+            <img id="selected-system-icon" src="Basic_Line_Logo.png" class="icon-logo"> Basic Line
+        </li>
+        <li onclick="selectSystem(this)" data-value="Unique Line">
+            <img id="selected-system-icon" src="Unique_Line_Logo.png" class="icon-logo"> Unique Line
+        </li>
+        <li onclick="selectSystem(this)" data-value="Custom Line">
+            <img id="selected-system-icon" src="Custom_Line_Logo.png" class="icon-logo"> Custom Line
+        </li>
+        </ul>
+        <input type="hidden" id="system_bey" name="system_bey">
+    </div>
+
+    <label for="stat_attack" class="form-label"><img class="icon-logo" src="Attack_logo.png" alt="Attack logo">Ataque</label>
+    <input type="number" id="stat_attack" name="stat_attack" required>
+
+    <label for="stat_defense" class="form-label"><img class="icon-logo" src="Defense_logo.png" alt="Defense logo"></i> Defesa</label>
+    <input type="number" id="stat_defense" name="stat_defense" required>
+
+    <label for="stat_stamina" class="form-label"><img class="icon-logo" src="Stamina_logo.png" alt="Stamina logo">
+        Resistência</label>
+    <input type="number" id="stat_stamina" name="stat_stamina" required>
+
+    <label for="link_fandom" class="form-label"><i class="fas fa-link"></i> Link Fandom</label>
+    <input type="url" id="link_fandom" name="link_fandom">
+
+    <button type="submit">Registrar Blade</button>
+</form>
+{% endblock content %}
