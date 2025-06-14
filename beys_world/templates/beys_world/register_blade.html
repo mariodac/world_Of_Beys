@@ -1,6 +1,6 @@
 {% extends 'global/base.html' %} 
-{% load i18n %} 
 {% load static %}
+{% load i18n %} 
 {% block content %}
 <h1>Registrar Blade</h1>
 <form action="#" method="post" enctype="multipart/form-data">
@@ -15,7 +15,7 @@
     <img id="preview" class="image-preview" alt="Pré-visualização da imagem">
 
     <label for="type_bey" class="form-label">
-        <img class="icon-logo" src="{% static 'global/images/Type.png' %}" alt="Type logo"> Tipo
+        <img class="icon-logo" src="{% static 'global/images/Types.png' %}" alt="Type logo"> Tipo
     </label>
     <div class="custom-select-container">
         <div class="custom-select-selected" onclick="toggleDropdownType(event)">
@@ -24,16 +24,16 @@
         </div>
         <ul class="custom-select-options" id="dropdown">
         <li onclick="selectOption(this)" data-value="Attack">
-            <img src='{% static "images/Attack_Logo.png" %}' class="icon-logo"> Attack
+            <img src="{% static 'global/images/Attack_Logo.png' %}" class="icon-logo"> Attack
         </li>
         <li onclick="selectOption(this)" data-value="Defense">
-            <img src='{% static "images/Defense_Logo.png" %}' class="icon-logo"> Defense
+            <img src="{% static 'global/images/Defense_Logo.png' %}" class="icon-logo"> Defense
         </li>
         <li onclick="selectOption(this)" data-value="Stamina">
-            <img src='{% static "images/Stamina_Logo.png" %}' class="icon-logo"> Stamina
+            <img src="{% static 'global/images/Stamina_Logo.png' %}" class="icon-logo"> Stamina
         </li>
         <li onclick="selectOption(this)" data-value="Balance">
-            <img src='{% static "images/Balance_Logo.png" %}' class="icon-logo"> Balance
+            <img src="{% static 'global/images/Balance_Logo.png' %}" class="icon-logo"> Balance
         </li>
         </ul>
         <input type="hidden" id="type_bey" name="type_bey">
@@ -45,12 +45,12 @@
     <div class="radio-group">
         <label class="radio-option">
             <input type="radio" id="right_spin" name="spin_direction" value="Right-Spin" required>
-            <img class="icon-logo" src="right-spin.png" alt="Right-Spin logo">
+            <img class="icon-logo" src="{% static 'global/images/right-spin.png' %}" alt="Right-Spin logo">
             Right-Spin
         </label>
         <label class="radio-option">
             <input type="radio" id="left_spin" name="spin_direction" value="Left-Spin">
-            <img class="icon-logo" src="left-spin.png" alt="Left-Spin logo">
+            <img class="icon-logo" src="{% static 'global/images/left-spin.png' %}" alt="Left-Spin logo">
             Left-Spin
         </label>
     </div>
@@ -68,25 +68,25 @@
         </div>
         <ul class="custom-select-options" id="dropdown-system">
         <li onclick="selectSystem(this)" data-value="Basic Line">
-            <img id="selected-system-icon" src="Basic_Line_Logo.png" class="icon-logo"> Basic Line
+            <img id="selected-system-icon" src="{% static 'global/images/Basic_Line_Logo.png' %}" class="icon-logo"> Basic Line
         </li>
         <li onclick="selectSystem(this)" data-value="Unique Line">
-            <img id="selected-system-icon" src="Unique_Line_Logo.png" class="icon-logo"> Unique Line
+            <img id="selected-system-icon" src="{% static 'global/images/Unique_Line_Logo.png' %}" class="icon-logo"> Unique Line
         </li>
         <li onclick="selectSystem(this)" data-value="Custom Line">
-            <img id="selected-system-icon" src="Custom_Line_Logo.png" class="icon-logo"> Custom Line
+            <img id="selected-system-icon" src="{% static 'global/images/Custom_Line_Logo.png' %}" class="icon-logo"> Custom Line
         </li>
         </ul>
         <input type="hidden" id="system_bey" name="system_bey">
     </div>
 
-    <label for="stat_attack" class="form-label"><img class="icon-logo" src="Attack_logo.png" alt="Attack logo">Ataque</label>
+    <label for="stat_attack" class="form-label"><img class="icon-logo" src="{% static 'global/images/Attack_Logo.png' %}" alt="Attack logo">Ataque</label>
     <input type="number" id="stat_attack" name="stat_attack" required>
 
-    <label for="stat_defense" class="form-label"><img class="icon-logo" src="Defense_logo.png" alt="Defense logo"></i> Defesa</label>
+    <label for="stat_defense" class="form-label"><img class="icon-logo" src="{% static 'global/images/Defense_Logo.png' %}" alt="Defense logo"></i> Defesa</label>
     <input type="number" id="stat_defense" name="stat_defense" required>
 
-    <label for="stat_stamina" class="form-label"><img class="icon-logo" src="Stamina_logo.png" alt="Stamina logo">
+    <label for="stat_stamina" class="form-label"><img class="icon-logo" src="{% static 'global/images/Stamina_Logo.png' %}" alt="Stamina logo">
         Resistência</label>
     <input type="number" id="stat_stamina" name="stat_stamina" required>
 
